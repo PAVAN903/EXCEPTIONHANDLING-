@@ -1,9 +1,19 @@
 package com.bridgelab;
 
 public class MoodAnalyser {
-	String analysedResult = " ";
+	static String message;
+	static String analysedResult = " ";
 
-	public String analyseMood(String message) {
+	public MoodAnalyser() {
+
+	}
+
+	public MoodAnalyser(String message) {
+
+		this.message = message;
+	}
+
+	public static String analyseMood() {
 		boolean analyse = message.toUpperCase().contains("SAD");
 		if (analyse == true) {
 			analysedResult = "SAD";
